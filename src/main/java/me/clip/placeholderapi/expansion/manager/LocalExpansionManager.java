@@ -216,12 +216,6 @@ public final class LocalExpansionManager implements Listener {
     if (!expansion.canRegister()) {
       return false;
     }
-    
-    if (expansions.containsKey(identifier)) {
-      Msg.warn("Failed to load expansion %s. Identifier is already in use.",
-          expansion.getIdentifier());
-      return false;
-    }
 
     if (expansion instanceof Configurable) {
       Map<String, Object> defaults = ((Configurable) expansion).getDefaults();
